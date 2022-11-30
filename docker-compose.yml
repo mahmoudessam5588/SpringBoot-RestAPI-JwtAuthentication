@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql
+    container_name: springboot2_mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: adminz
+    ports:
+      - "3306:3306"
+    volumes:
+      - RestAPI-JWT:/var/lib/mysql
+volumes:
+  RestAPI-JWT:
